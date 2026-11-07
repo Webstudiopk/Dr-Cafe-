@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doctor’s Café & Fast Food Corner – Mianwali</title>
+<meta name="description" content="Burgers, shawarma, Chinese rice, Mtka chicken cheese and chai in Mianwali. Free home delivery. Order on WhatsApp.">
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f1715;--bg2:#141f1c;--surface:#1a2724;--line:#2a3a35;--text:#f3efe4;--muted:#a9b5ae;--gold:#d4a64a;--orange:#e6c27a;--ink:#0f1715;--ok:#4cc38a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fbf6ea;--bg2:#f3ecd9;--surface:#fff;--line:#e6dcc4;--text:#1d1c19;--muted:#6b665a;--ok:#1d8a57;--gold:#8f6a1a;--orange:#a8561f;--ink:#fffaf0;color-scheme:light}}
+:root[data-theme="dark"]{--bg:#0f1715;--bg2:#141f1c;--surface:#1a2724;--line:#2a3a35;--text:#f3efe4;--muted:#a9b5ae}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;background:var(--bg);color:var(--text);font:500 17px/1.55 Hind,system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Bowlby One",Impact,sans-serif;font-weight:400;margin:0;line-height:1.08}
+.top{background:var(--gold);color:var(--ink);font-weight:700;font-size:14px;text-align:center;padding:7px 12px}
+header.nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand b{font:400 17px/1 "Bowlby One",Impact,sans-serif;color:var(--gold)}
+.brand small{display:block;font:600 11px/1.2 Hind,sans-serif;color:var(--muted);margin-top:3px}
+.links{display:flex;align-items:center;gap:20px;font-size:15px;font-weight:600}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--gold)}
+.cartbtn{background:var(--gold);color:var(--ink)!important;border:0;border-radius:999px;padding:9px 16px;font:700 15px Hind,sans-serif;cursor:pointer}
+.cartbtn span{background:var(--ink);color:var(--gold);border-radius:999px;padding:1px 8px;margin-left:6px;font-size:13px}
+.hero{padding:54px 0 44px;background:radial-gradient(900px 400px at 85% 0,rgba(212,166,74,.14),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:5px 14px;margin-bottom:18px;background:var(--bg2)}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--muted)}
+.status.open i{background:var(--ok)}
+.hero h1{font-size:clamp(38px,7.5vw,72px);color:var(--gold)}
+.hero h1 span{display:block;color:var(--orange);font-size:.58em;margin-top:.2em}
+.hero p{color:var(--muted);font-size:19px;max-width:30em;margin:20px 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font:700 16px Hind,sans-serif;text-decoration:none;border:2px solid var(--gold);cursor:pointer}
+.btn.main{background:var(--gold);color:var(--ink)}
+.btn.main:hover{background:var(--orange);border-color:var(--orange)}
+.btn.ghost{background:transparent;color:var(--text)}
+.btn.ghost:hover{background:var(--gold);color:var(--ink)}
+.fav{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.fav h3{font-size:18px;color:var(--gold);margin-bottom:12px}
+.fav .r{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.fav .r:last-of-type{border-bottom:0}
+.fav .r b{color:var(--gold)}
+.fav .tag{display:inline-block;background:var(--orange);color:var(--ink);font-size:12px;font-weight:700;border-radius:6px;padding:1px 8px;margin-left:6px}
+.strip{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;padding-top:22px;padding-bottom:22px}
+.strip div b{display:block;color:var(--gold)}
+.strip div span{color:var(--muted);font-size:15px}
+section{padding:50px 0}
+.h2{font-size:clamp(28px,5vw,40px);color:var(--gold);margin-bottom:6px}
+.sub{color:var(--muted);margin:0 0 22px}
+.tabs{position:sticky;top:60px;z-index:10;background:var(--bg);padding:10px 0;display:flex;gap:8px;overflow-x:auto;border-bottom:1px solid var(--line);margin-bottom:24px}
+.tabs button{flex:none;border:1.5px solid var(--line);background:var(--surface);color:var(--text);border-radius:999px;padding:8px 18px;font:600 15px Hind,sans-serif;cursor:pointer}
+.tabs button.on{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.cat{margin-bottom:34px}
+.cat h3{font-size:22px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:12px;justify-content:space-between}
+.item .n{font-weight:700;font-size:18px;line-height:1.25}
+.item .d{color:var(--muted);font-size:14px}
+.item .f{display:flex;align-items:center;justify-content:space-between}
+.item .p{font:400 19px "Bowlby One",Impact,sans-serif;color:var(--gold)}
+.add{border:2px solid var(--gold);background:transparent;color:var(--gold);border-radius:999px;padding:6px 16px;font:700 15px Hind,sans-serif;cursor:pointer}
+.add:hover{background:var(--gold);color:var(--ink)}
+.sub4{color:var(--orange);font-weight:700;margin:16px 0 8px}
+.note{color:var(--muted);font-size:15px;background:var(--bg2);border-radius:10px;padding:12px 16px;margin-top:12px}
+.loc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:18px;color:var(--gold);margin-bottom:10px}
+.card p{margin:0 0 6px}
+.card a{color:var(--orange);font-weight:700}
+.ur{font-size:20px;direction:rtl;color:var(--orange);margin-top:10px!important}
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:28px 0;color:var(--muted);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+#ov{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;z-index:40}
+#ov.on{display:block}
+#dr{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg);border-left:1px solid var(--line);z-index:50;display:none;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+#dr.on{display:flex}
+#dr .hd{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
+#dr .hd h3{font-size:20px;color:var(--gold)}
+#dr .x{background:none;border:0;color:var(--text);font-size:28px;cursor:pointer;line-height:1}
+#lines{flex:1;overflow:auto;padding:8px 20px}
+.ln{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.ln .n{flex:1;font-weight:600}
+.ln small{display:block;color:var(--muted);font-weight:500}
+.q{display:flex;align-items:center;gap:8px}
+.q button{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--gold);background:none;color:var(--gold);font-size:18px;cursor:pointer;line-height:1}
+.empty{color:var(--muted);padding:30px 0;text-align:center}
+#dr .ft{padding:16px 20px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:grid;gap:10px}
+#dr input,#dr textarea{width:100%;background:var(--surface);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:11px 12px;font:500 16px Hind,sans-serif}
+.tot{display:flex;justify-content:space-between;font-weight:700;font-size:18px}
+.tot b{color:var(--gold)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.links a.l{display:none}}
+</style>
+</head>
+<body>
+<div class="top">Free home delivery in Mianwali · Open 11 am to 12 am · Call 0323-7816305</div>
+<header class="nav"><div class="wrap">
+<a class="brand" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="#0f1715" stroke="#d4a64a" stroke-width="2"/><path d="M12 20a5 5 0 0 1 2-9 6 6 0 0 1 12 0 5 5 0 0 1 2 9z" fill="#fff"/><rect x="12" y="20" width="16" height="5" rx="1" fill="#fff"/><path d="M13 29h14M15 32.5h10" stroke="#e6c27a" stroke-width="2.4" stroke-linecap="round"/></svg><span><b>Doctor’s Café</b><small>& Fast Food Corner</small></span></a>
+<nav class="links"><a class="l" href="#menu">Menu</a><a class="l" href="#visit">Find us</a><button class="cartbtn" id="open">Order <span id="badge">0</span></button></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<div class="status" id="status"><i></i><span id="stxt">Checking hours</span></div>
+<h1>Doctor’s Café<span>& Fast Food Corner</span></h1>
+<p>Hot burgers, shawarma, Chinese rice and loaded Mtka chicken cheese, made fresh in Mianwali and delivered to your door at no charge.</p>
+<div class="btns"><a class="btn main" href="#menu">Order now</a><a class="btn ghost" href="tel:+923237816305">Call 0323-7816305</a></div>
+</div>
+<aside class="fav"><h3>Customer favourites</h3>
+<div class="r"><span>Mtka Chicken Cheese<span class="tag">Special</span></span><b>Rs. 600</b></div>
+<div class="r"><span>Zinger Cheese Burger</span><b>Rs. 400</b></div>
+<div class="r"><span>Chicken Fried Rice</span><b>Rs. 450</b></div>
+<div class="r"><span>Chicken Shawarma</span><b>Rs. 200</b></div>
+</aside>
+</div></div>
+
+<div class="strip"><div class="wrap">
+<div><b>Free home delivery</b><span>No delivery charges</span></div>
+<div><b>Family hall</b><span>Dine in with your family</span></div>
+<div><b>Rated 5.0 on Google Maps</b><span>Loved by customers in Mianwali</span></div>
+<div><b>Open late</b><span>11 am to 12 am daily</span></div>
+</div></div>
+
+<section id="menu"><div class="wrap">
+<h2 class="h2">Our menu</h2>
+<p class="sub">Add items to your order and send it on WhatsApp. All prices in Rs.</p>
+<div class="tabs" id="tabs"></div>
+<div id="cats"></div>
+</div></section>
+
+<section id="visit" style="background:var(--bg2)"><div class="wrap">
+<h2 class="h2">Find us</h2>
+<p class="sub">Visit the café or order for delivery.</p>
+<div class="loc">
+<div class="card"><h3>Address</h3><p>Near Mami Uttra Phatak, Mianwali</p><p>Kundiyan Road, Qadara Abad, Mianwali</p><p><a href="https://www.google.com/maps/search/?api=1&query=HGCJ%2BGW+Mianwali+Pakistan" target="_blank" rel="noopener">Get directions</a></p></div>
+<div class="card"><h3>Order and contact</h3><p><a href="tel:+923237816305">0323-7816305</a></p><p><a href="https://wa.me/923237816305" target="_blank" rel="noopener">Chat on WhatsApp</a></p><p class="ur">فیملی ہال کی سہولت موجود ہے</p></div>
+<div class="card"><h3>Opening hours</h3><p>Every day, 11 am to 12 am</p><p>Free home delivery</p></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><span>© Doctor’s Café & Fast Food Corner, Mianwali</span><span>0323-7816305</span></div></footer>
+
+<div id="ov"></div>
+<aside id="dr" aria-label="Your order">
+<div class="hd"><h3>Your order</h3><button class="x" id="close" aria-label="Close">×</button></div>
+<div id="lines"></div>
+<div class="ft"><div class="tot"><span>Total</span><b id="tot">Rs. 0</b></div>
+<input id="nm" placeholder="Your name" autocomplete="name">
+<textarea id="ad" rows="2" placeholder="Delivery address"></textarea>
+<button class="btn main" id="send">Send order on WhatsApp</button></div>
+</aside>
+
+<script>
+var M=[
+{t:"Fast Foods",i:[["Mtka Chicken Cheese",600,"Our loaded special"],["Zinger Cheese Burger",400],["Zinger Burger",350],["Zinger Shawarma",350],["Paratha Roll",400],["Chicken Burger",250],["Patty Burger",200],["Chicken Shawarma",200],["French Fries",200],["Wings",300,"6 pieces"],["Nuggets",300,"6 pieces"]]},
+{t:"Chinese Rice",i:[["Special Fried Rice",500],["Chicken Fried Rice",450],["Egg Fried Rice",350],["Vegetable Fried Rice",350]]},
+{t:"Chicken Cake",i:[["Chicken Cake, 1 pound",1500],["Chicken Cake, 2 pound",2500]]},
+{t:"Coffee and Tea",s:[["Coffee",[["Cold Coffee",400],["Hot Coffee",350]]],["Tea",[["Special Tea",120],["Simple Tea",70],["Elachi Tea",70],["Adrak Tea",80]]]]},
+{t:"Juices and Drinks",i:[["Milk Shake",200],["Mint Margarita",200]],note:"Cold Drink is available in 1/2 litre, 1 litre and 2 litre. Call 0323-7816305 for rates."}
+];
+var cart={},P={};
+function card(x){P[x[0]]=x[1];return '<div class="item"><div><div class="n">'+x[0]+'</div>'+(x[2]?'<div class="d">'+x[2]+'</div>':'')+'</div><div class="f"><span class="p">Rs. '+x[1]+'</span><button class="add" data-n="'+x[0]+'">Add</button></div></div>'}
+var cats=document.getElementById("cats"),tabs=document.getElementById("tabs");
+M.forEach(function(c,k){
+ var h='<div class="cat" id="c'+k+'"><h3>'+c.t+'</h3>';
+ if(c.i)h+='<div class="grid">'+c.i.map(card).join("")+'</div>';
+ if(c.s)c.s.forEach(function(s){h+='<div class="sub4">'+s[0]+'</div><div class="grid">'+s[1].map(card).join("")+'</div>'});
+ if(c.note)h+='<div class="note">'+c.note+'</div>';
+ cats.insertAdjacentHTML("beforeend",h+'</div>');
+ tabs.insertAdjacentHTML("beforeend",'<button data-k="'+k+'">'+c.t+'</button>');
+});
+tabs.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;document.getElementById("c"+b.dataset.k).scrollIntoView({behavior:"smooth"})});
+var tb=tabs.querySelectorAll("button");
+function spy(){var cur=0;M.forEach(function(c,k){if(document.getElementById("c"+k).getBoundingClientRect().top<170)cur=k});tb.forEach(function(b,k){b.classList.toggle("on",k===cur)})}
+addEventListener("scroll",spy,{passive:true});spy();
+function draw(){var q=0,t=0,h="";for(var n in cart){var l=cart[n];q+=l.q;t+=l.q*P[n];
+ h+='<div class="ln"><div class="n">'+n+'<small>Rs. '+P[n]+' each</small></div><div class="q"><button data-m="-" data-n="'+n+'" aria-label="Remove one">−</button><b>'+l.q+'</b><button data-m="+" data-n="'+n+'" aria-label="Add one">+</button></div></div>'}
+ document.getElementById("lines").innerHTML=h||'<div class="empty">Your order is empty. Add items from the menu.</div>';
+ document.getElementById("badge").textContent=q;document.getElementById("tot").textContent="Rs. "+t}
+function show(on){document.getElementById("dr").classList.toggle("on",on);document.getElementById("ov").classList.toggle("on",on)}
+document.getElementById("open").onclick=function(){show(true)};
+document.getElementById("close").onclick=document.getElementById("ov").onclick=function(){show(false)};
+document.addEventListener("click",function(e){var a=e.target.closest(".add");if(a){var n=a.dataset.n;cart[n]=cart[n]||{q:0};cart[n].q++;draw();a.textContent="Added";setTimeout(function(){a.textContent="Add"},700);return}
+ var m=e.target.closest("[data-m]");if(m){var n2=m.dataset.n;cart[n2].q+=m.dataset.m==="+"?1:-1;if(cart[n2].q<1)delete cart[n2];draw()}});
+document.getElementById("send").onclick=function(){
+ if(!Object.keys(cart).length){alert("Please add at least one item.");return}
+ var l=["Assalam o Alaikum, I would like to order:"],t=0;
+ for(var k in cart){var s=cart[k].q*P[k];t+=s;l.push(cart[k].q+" x "+k+" (Rs. "+s+")")}
+ l.push("Total: Rs. "+t);
+ var nm=document.getElementById("nm").value.trim(),ad=document.getElementById("ad").value.trim();
+ if(nm)l.push("Name: "+nm);if(ad)l.push("Address: "+ad);
+ window.open("https://wa.me/923237816305?text="+encodeURIComponent(l.join("\n")),"_blank")};
+(function(){var h=+new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Karachi"})).getHours();
+ var open=h>=11,s=document.getElementById("status");s.classList.toggle("open",open);
+ document.getElementById("stxt").textContent=open?"Open now · until 12 am":"Closed now · opens at 11 am"})();
+draw();
+</script>
+</body>
+</html>
